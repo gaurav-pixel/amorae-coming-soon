@@ -58,8 +58,7 @@
             margin-top: 0;
         }
 
-        /* --- Pinterest Aesthetic Notify Section --- */
-
+        /* Pinterest Aesthetic Notify Box */
         .notify-box {
             margin-top: 25px;
             background: var(--soft-peach);
@@ -132,7 +131,13 @@
 
         <div class="notify-box">
             <form action="https://formsubmit.co/weareamorae@gmail.com" method="POST">
+                
+                <!-- Disable CAPTCHA -->
                 <input type="hidden" name="_captcha" value="false">
+
+                <!-- ✅ Redirect to your redirect.html inside same folder -->
+                <input type="hidden" name="_next" value="https://amorae.co.in/redirect.html">
+
                 <input type="email" name="email" placeholder="Enter your email" required />
                 <button type="submit">Notify Me</button>
             </form>
