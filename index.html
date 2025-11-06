@@ -4,45 +4,99 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amorae – Coming Soon</title>
-
     <style>
+        :root {
+            --peach: #F7D7C7;
+            --coral: #E36C61;
+            --text-dark: #5A5757;
+        }
+
         body {
             margin: 0;
             padding: 0;
-            background-color: #F7D7C7; /* Peach background */
-            font-family: "Arial", sans-serif;
-            height: 100vh;
+            background-color: var(--peach);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
             flex-direction: column;
+            text-align: center;
+        }
+
+        .card {
+            background: #fff;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            max-width: 450px;
+            width: 90%;
+            animation: fadeIn 1.2s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         img {
-            width: 200px;
+            width: 140px;
             margin-bottom: 20px;
-            border-radius: 10px;
         }
 
         h1 {
-            font-size: 36px;
-            color: #E36C61; /* Coral */
-            margin: 10px 0;
+            font-size: 32px;
+            color: var(--coral);
+            margin-bottom: 8px;
+            font-weight: 600;
         }
 
         p {
-            color: #7A7A7A;
-            font-size: 18px;
-            max-width: 500px;
+            color: var(--text-dark);
+            font-size: 17px;
+            margin-top: 0;
+        }
+
+        .tagline {
+            margin-top: 15px;
+            font-size: 14px;
+            color: var(--coral);
+            font-weight: 500;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #8a8a8a;
         }
     </style>
 </head>
 
 <body>
-    <img src="logo.png" alt="Amorae Logo"> <!-- Replace with uploaded file name on hosting -->
-    <h1>We're Currently Building Something Beautiful 🌸</h1>
-    <p>Our website is under construction. Stay tuned!</p>
+    <div class="card">
+        <img src="logo.png" alt="Amorae Logo" />
+        <h1>We're Building Something Beautiful</h1>
+        <p>Our website is currently under construction. Stay tuned for a fresh and delightful experience crafted just for you.</p>
+        <div class="tagline">Affordable, Adorable & Absolutely Yours.</div>
+
+        <form class="waitlist" 
+              action="https://formsubmit.co/weareamorae@gmail.com" 
+              method="POST" 
+              style="margin-top:25px; display:flex; gap:10px; justify-content:center;">
+
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="redirect.html">
+
+            <input type="email" name="email" placeholder="Enter your email" required 
+                   style="padding:10px 14px; border-radius:8px; border:1px solid #ddd; flex:1; max-width:220px;">
+            <button type="submit" 
+                    style="background:var(--coral); color:white; padding:10px 18px; border:none; border-radius:8px; cursor:pointer; font-weight:500;">
+                Notify Me
+            </button>
+        </form>
+
+    </div>
+
+    <footer>© 2025 Amorae. All rights reserved.</footer>
 </body>
 </html>
-
